@@ -10,8 +10,15 @@ layout: default
       </div>
       <div class="author-name">{{site.author}}</div>
       <p>{{site.about-author}}</p>
-      <a href="/tags/">글 분류 보기</a>
-      <a href="/tags/#nodejs">Node.js</a>
+      <div style="display: flex; flex-direction: column; width: 100%;">
+        <div style="background-color: aqua;">
+          <a href="/tags/" class="tagText">글 분류 보기</a>
+        </div>
+        <div style="background-color: aqua;">
+          <a href="/tags/#nodejs" class="tagText">Node.js</a>
+        </div>
+      </div>
+      
     </div>
   </header> <!-- End Header -->
   <footer>
