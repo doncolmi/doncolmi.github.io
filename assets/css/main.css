@@ -60,6 +60,11 @@ main {
   display: block;
 }
 
+.tagText {text-decoration: none;color:black;font-weight: bold;}
+.tagText:active {text-decoration: none;color:black;font-weight: bold;}
+.tagText:visited {text-decoration: none;color:black;font-weight: bold;}
+.tagText:hover {text-decoration: none;color:black;font-weight: bold;}
+
 /**
  * Add the correct margin in IE 8.
  */
