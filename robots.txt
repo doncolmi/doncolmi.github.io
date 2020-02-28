@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://doncolmi.github.io/sitemap.xml

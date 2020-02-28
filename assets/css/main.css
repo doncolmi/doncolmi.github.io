@@ -60,6 +60,9 @@ main {
   display: block;
 }
 
+small{
+  color:gray;
+}
 .tagText {text-decoration: none;color:black;font-weight: bold;}
 .tagText:active {text-decoration: none;color:black;font-weight: bold;}
 .tagText:visited {text-decoration: none;color:black;font-weight: bold;}
