@@ -20,7 +20,7 @@ social-email: matathresh1740@naver.com
 discus-identifier: doncolmi # add your discus identifier
 
 # Tracker
-analytics: # Google Analytics
+analytics: UA-157739638-1
 
 # Build Settings
 markdown: kramdown
