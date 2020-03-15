@@ -15,7 +15,7 @@ tags: [nodejs]
 
     해당 글에선 node 설치와 express-generator와 nodemon을 이용한 express 세팅을 했다.
 
-2. [Node.js + Express + MariaDB 로 로그인/게시판 구현하기(1)](https://doncolmi.github.io/testProject2/)
+2. [Node.js + Express + MariaDB 로 로그인/게시판 구현하기(2)](https://doncolmi.github.io/testProject2/)
 
     해당 글에선 MariaDB를 설치하고 해당 DB를 Express 프로젝트에 연동시켰다.
 
