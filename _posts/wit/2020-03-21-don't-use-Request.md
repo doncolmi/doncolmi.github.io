@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [번역글] npm Request 의 개발 중단이 된 이유
+title: (번역글) npm Request 의 개발 중단이 된 이유
 date: 2020-03-21 03:38:00 +0000
 description: hello
 img: ./wit/2020-03-21-don't-use-Request/2.png
