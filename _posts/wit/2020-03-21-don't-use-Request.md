@@ -1,10 +1,10 @@
 ---
 layout: post
 title: [번역글] npm Request 의 개발 중단이 된 이유
-date: 2020-03-12 10:44:00 +0000
+date: 2020-03-21 03:38:00 +0000
 description: hello
 img: ./wit/2020-03-21-don't-use-Request/2.png
-tags: [What_did_i_do_it]
+tags: [What_is_this]
 ---
 
 Node.js 크롤링 관련글을 올리려 했을 정리할 때, 내 크롤링 예제는 request를 이용하여 해당 사이트의 HTML을 가져왔었다. (현재 수정된 예제는 axios 를 사용하고 있다.) 아마 어떤 이유였는지는 까먹었으나 npm 사이트에 가서 request를 검색해보니 내가 원하는 결과가 나오질 않았다.
