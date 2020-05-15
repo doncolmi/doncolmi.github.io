@@ -32,14 +32,6 @@ Node.js + Express + MariaDB로 로그인/게시판을 만들고자 했던 시리
 
 해당 글은 Node.js, MariaDB, Express 설치 및 세팅을 설명하는 글입니다. 이미 **전 시리즈를 따라하셨거나 이미 깔려있다면 생략해도 되는** 글입니다.
 
-<center>
-<ins class="kakao_ad_area" style="display:none;" 
- data-ad-unit    = "DAN-u8dziawcgw1g" 
- data-ad-width   = "100%" 
- data-ad-height  = "90"></ins> 
-<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-</center>
-
 ### 0-1. MariaDB 설치
 
 ---
