@@ -4,7 +4,7 @@ layout: main
 <article class="article-page">
   <div class="page-content">
     {% if page.img %}
-    <div class="page-cover-image">
+    <div class="page-cover-image" style="margin-bottom: 3%;">
       <figure>
         <img class="page-image" src={{ "/assets/img/" | prepend: site.baseurl | append : page.img}} alt="{{page.title}}">
         {% if page.fig-caption %}
