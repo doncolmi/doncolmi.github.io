@@ -32,6 +32,12 @@ Node.js + Express + MariaDB로 로그인/게시판을 만들고자 했던 시리
 
 해당 글은 Node.js, MariaDB, Express 설치 및 세팅을 설명하는 글입니다. 이미 **전 시리즈를 따라하셨거나 이미 깔려있다면 생략해도 되는** 글입니다.
 
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-u8dziawcgw1g" 
+ data-ad-width   = "728" 
+ data-ad-height  = "90"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
 ### 0-1. MariaDB 설치
 
 ---
@@ -69,6 +75,12 @@ Node.js + Express + MariaDB로 로그인/게시판을 만들고자 했던 시리
 <center><img src="/assets/img/nodejs/newProject/2020-05-12-newProject1/8.png"></center>
 
 그리고 이제 DB를 사용할 계정을 만들어야 한다. 위와 같이 명령어를 입력하면 된다. 입력하기 귀찮다고 해도 자기 손으로 직접 한번씩 작성하는 것을 추천한다.
+
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-u8dziawcgw1g" 
+ data-ad-width   = "728" 
+ data-ad-height  = "90"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
 
 `CREATE USER '유저이름'@'localhost' IDENTIFIED BY '패스워드';`
 
@@ -126,6 +138,12 @@ CREATE TABLE `notice` (
 -- user는 글 작성자
 -- Date들은 작성시간, 수정시간을 의미한다.
 ```
+
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-u8dziawcgw1g" 
+ data-ad-width   = "728" 
+ data-ad-height  = "90"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
 
 ### 0-2. Node.js 설치
 
@@ -191,6 +209,12 @@ Webstorm을 설치하고 테마 설정등을 하고 나면 아래와 같은 창�
 <center>**"근데 잠시만요, WebStorm을 안 쓰면 어떻게 하죠?"**</center>
 
 아...
+
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-u8dziawcgw1g" 
+ data-ad-width   = "728" 
+ data-ad-height  = "90"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
 
 ### 0-5. Express 세팅하기
 
@@ -269,3 +293,9 @@ app.js에 가면 상관없긴 하지만 **var 천국입니다.** 현재 JS에서
 그리고 bin/www.js도 이와 같은 방법으로 var를 모두 지워주시면 모든 세팅이 끝났습니다.
 
 재미없는 글을 따라오느라 수고 많으셨고 다음 장부터는 실제로 서버를 켜보고 게시판을 만들어보도록 하겠습니다.
+
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-u8dziawcgw1g" 
+ data-ad-width   = "728" 
+ data-ad-height  = "90"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
