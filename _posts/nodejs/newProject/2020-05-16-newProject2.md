@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Node.js + Express + MariaDB(Mysql)로 게시판 만들기 - 1.  Hello World 및 Nodemon 설정
-date: 2020-05-12 23:03:00 +0000
+date: 2020-05-16 00:03:00 +0000
 description: # Add post description (optional)
 img: ./nodejs/newProject/2020-05-12-newProject1/1.png
 tags: [boardMaker]
