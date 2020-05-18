@@ -128,7 +128,7 @@ CREATE TABLE `notice` (
 ```
 
 <center>
-<ins class="kakao_ad_area" style="display:none;" 
+<ins class="kakao_ad_area" style="display:none; margin-top: 15px;" 
  data-ad-unit    = "DAN-1iykkck0nlqnp" 
  data-ad-width   = "250" 
  data-ad-height  = "250"></ins> 
