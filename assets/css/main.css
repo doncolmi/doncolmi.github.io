@@ -101,7 +101,9 @@ pre {
 }
 
 #comAD {
-  display: inherit;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 #mobAD {
@@ -1389,7 +1391,9 @@ a.newer-posts:hover {
   }
 
   #mobAD {
-    display: inherit;
+    display: flex;
+    align-content: center;
+    justify-content: center;
   }
 
   .post {
@@ -1424,7 +1428,9 @@ a.newer-posts:hover {
   }
 
   #mobAD {
-    display: inherit;
+    display: flex;
+    align-content: center;
+    justify-content: center;
   }
   .sidebar {
     position: relative;
@@ -1494,7 +1500,9 @@ a.newer-posts:hover {
   }
 
   #mobAD {
-    display: inherit;
+    display: flex;
+    align-content: center;
+    justify-content: center;
   }
 
   .content-box {
