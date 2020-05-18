@@ -228,6 +228,14 @@ block content
 
 드디어 서버를 실행시켰습니다. 그리고 서버를 끌 때는 Ctrl+C 를 누르고 **일괄 작업을 끝내시겠습니까 (Y/N)?** 라는 안내문이 나오면 y를 누르시고 엔터키로 빠져나오실 수 있습니다.
 
+<center>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-1iykkck0nlqnp" 
+ data-ad-width   = "250" 
+ data-ad-height  = "250"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</center>
+
 ### 1-3. Nodemon으로 작업 환경을 편하게 만들자.
 
 ---

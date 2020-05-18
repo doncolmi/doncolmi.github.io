@@ -127,6 +127,15 @@ CREATE TABLE `notice` (
 -- Date들은 작성시간, 수정시간을 의미한다.
 ```
 
+<center>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-1iykkck0nlqnp" 
+ data-ad-width   = "250" 
+ data-ad-height  = "250"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</center>
+
+
 ### 0-2. Node.js 설치
 
 ---

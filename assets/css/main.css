@@ -100,6 +100,14 @@ pre {
   /* 2 */
 }
 
+#comAD {
+  display: inherit;
+}
+
+#mobAD {
+  display: none;
+}
+
 /* Text-level semantics
    ========================================================================== */
 /**
@@ -1375,6 +1383,15 @@ a.newer-posts:hover {
 /* - - - - - - - - - - Media Styles - - - - - - - - - - */
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+
+  #comAD {
+    display: none;
+  }
+
+  #mobAD {
+    display: inherit;
+  }
+
   .post {
     width: 48%;
     max-width: 100%;
@@ -1401,6 +1418,14 @@ a.newer-posts:hover {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+
+  #comAD {
+    display: none;
+  }
+
+  #mobAD {
+    display: inherit;
+  }
   .sidebar {
     position: relative;
     display: -webkit-box;
@@ -1463,6 +1488,15 @@ a.newer-posts:hover {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+
+  #comAD {
+    display: none;
+  }
+
+  #mobAD {
+    display: inherit;
+  }
+
   .content-box {
     padding: 10px;
   }
