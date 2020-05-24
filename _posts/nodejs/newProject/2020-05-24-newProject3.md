@@ -249,6 +249,14 @@ app.set('view engine', 'pug');
 
 위에서 주의할 점은 view engine setup 부분보다 위에 들어가야 합니다.
 
+<center>
+<ins class="kakao_ad_area" style="display:none;" 
+ data-ad-unit    = "DAN-rhrpgzjrgnxv" 
+ data-ad-width   = "250" 
+ data-ad-height  = "250"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</center>
+
 ### 2-2. 대충 프로젝트의 골격을 짜보자.
 
 ---
@@ -437,6 +445,14 @@ html
 <center><img src="/assets/img/nodejs/newProject/2020-05-24-newProject3/9.png"></center>
 
 이렇게 뜬다면 아주 잘된 케이스입니다. 
+
+<center>
+<ins class="kakao_ad_area" style="display:none; margin-top: 15px;" 
+ data-ad-unit    = "DAN-1iykkck0nlqnp" 
+ data-ad-width   = "250" 
+ data-ad-height  = "250"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</center>
 
 ### 2-4. 게시글 작성은 어떻게 되는건가요
 
