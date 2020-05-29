@@ -62,6 +62,14 @@ node.js와 express를 공부했지만 아직 갈피를 잡지 못했다. 사실 
 
 아마 아무것도 손대지 않았다면 아래와 같은 창이 뜬다.
 
+<center>
+<ins class="kakao_ad_area" style="display:none; margin-top: 15px;" 
+ data-ad-unit    = "DAN-1iykkck0nlqnp" 
+ data-ad-width   = "250" 
+ data-ad-height  = "250"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</center>
+
 ---
 
 # 주의!

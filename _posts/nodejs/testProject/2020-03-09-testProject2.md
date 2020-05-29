@@ -188,6 +188,14 @@ DB를 만들어야 그 안에 테이블을 만들어 데이터를 집어 넣을 
 
 이러면 **지루하고 지루했던 MariaDB세팅은 끝냈다고 볼 수 있다. 이제 웹스톰으로 넘어가 프로젝트를 보자.**
 
+<center>
+<ins class="kakao_ad_area" style="display:none; margin-top: 15px;" 
+ data-ad-unit    = "DAN-1iykkck0nlqnp" 
+ data-ad-width   = "250" 
+ data-ad-height  = "250"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</center>
+
 ### Express와 MariaDB 연동
 
 ---

@@ -24,6 +24,14 @@ node.js와 express를 공부했지만 아직 갈피를 잡지 못했다. 사실 
 <center><img src="/assets/img/nodejs/testProject/2020-03-08-testProject1/1.png"></center>
 <center><small>IDE는 MS사의 Visual Studio Code를 사용해도 무방하다. Notepad++도 가능하다.</small></center>
 
+<center>
+<ins class="kakao_ad_area" style="display:none; margin-top: 15px;" 
+ data-ad-unit    = "DAN-1iykkck0nlqnp" 
+ data-ad-width   = "250" 
+ data-ad-height  = "250"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</center>
+
 ### Node.js 세팅
 
 ---

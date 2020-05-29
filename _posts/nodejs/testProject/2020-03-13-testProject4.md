@@ -74,6 +74,14 @@ Redis는 **윈도우용 설치 파일**이 따로 없다. **tar.gz**파일로 un
 
 이렇게 127.0.0.1:6379(localhost:port)가 나온다면 설치가 잘 완료된 것이므로 다음으로 넘어가자.
 
+<center>
+<ins class="kakao_ad_area" style="display:none; margin-top: 15px;" 
+ data-ad-unit    = "DAN-1iykkck0nlqnp" 
+ data-ad-width   = "250" 
+ data-ad-height  = "250"></ins> 
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</center>
+
 ### views 파일 생성 & Redis 연동
 
 ---
