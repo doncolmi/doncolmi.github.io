@@ -460,7 +460,9 @@ html
 
 <center><img src="/assets/img/nodejs/newProject/2020-05-24-newProject3/10.png"></center>
 
+<center>
 **"그래서 게시글 작성은 어떻게 하는건데요?"**
+</center>
 
 먼저 우리는 /board/post 페이지에 들어가 **닉네임, 비밀번호, 제목, 내용을 입력해야합니다.**
 
