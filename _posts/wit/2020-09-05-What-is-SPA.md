@@ -3,7 +3,7 @@ layout: post
 title: SPA 란? - What is SPA
 date: 2020-09-05 15:04:00 +0000
 description: hello
-img: ./wdidi/2020-09-05-What-is-SPA/0.png
+img: ./wit/2020-09-05-What-is-SPA/0.png
 tags: [What_is_this]
 ---
 
