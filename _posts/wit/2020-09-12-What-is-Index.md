@@ -3,7 +3,7 @@ layout: post
 title: (DB) Index 란? - What is Index
 date: 2020-09-12 17:54:00 +0000
 description: hello
-img: ./wit/2020-09-12-What-is-Index/1.png
+img: ./wit/2020-09-12-What-is-Index/10.png
 tags: [What_is_this]
 ---
 
