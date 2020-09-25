@@ -17,7 +17,7 @@ Node.js + Express + MariaDB로 로그인/게시판을 만들고자 했던 시리
 
 - [Node.js 12.16.1 LTS](https://nodejs.org/ko/)
 - express 4.16.1
-    - 템플릿 엔진은 pug 사용 예정
+  - 템플릿 엔진은 pug 사용 예정
 - [MariaDB](https://mariadb.org)
 - IDE는 Jetbrain사의 Webstorm을 사용한다.
 
@@ -41,7 +41,7 @@ Node.js + Express + MariaDB로 로그인/게시판을 만들고자 했던 시리
 <center><img src="/assets/img/nodejs/newProject/2020-05-12-newProject1/2.png"></center>
 <center><small>얼마나 큰 차이가 나겠냐 하지만 불안정한 Beta보다는 Stable 버전을 받아주자.</small></center>
 
-초록색 Download 버튼을 누르게 된다면 
+초록색 Download 버튼을 누르게 된다면
 
 <center><img src="/assets/img/nodejs/newProject/2020-05-12-newProject1/3.png"></center>
 
@@ -102,7 +102,7 @@ Node.js + Express + MariaDB로 로그인/게시판을 만들고자 했던 시리
 <center><img src="/assets/img/nodejs/newProject/2020-05-12-newProject1/12.png"></center>
 <center><small>위에 오타난건 무시해주자.</small></center>
 
-**우리는 간단한 게시판을 만들예정이니 board라는 이름의 DB를 하나 만들어주자.** 만드는 법은 간단하다. `**CREATE DATABASE DB이름`** 을 입력해주자. 그렇다면 우리는 `CREATE DATABASE board;` 라고 입력하면 된다.
+**우리는 간단한 게시판을 만들예정이니 board라는 이름의 DB를 하나 만들어주자.** 만드는 법은 간단하다. `**CREATE DATABASE DB이름`\*\* 을 입력해주자. 그렇다면 우리는 `CREATE DATABASE board;` 라고 입력하면 된다.
 
 <center><img src="/assets/img/nodejs/newProject/2020-05-12-newProject1/13.png"></center>
 
@@ -126,15 +126,6 @@ CREATE TABLE `notice` (
 -- user는 글 작성자
 -- Date들은 작성시간, 수정시간을 의미한다.
 ```
-
-<center>
-<ins class="kakao_ad_area" style="display:none; margin-top: 15px;" 
- data-ad-unit    = "DAN-1iykkck0nlqnp" 
- data-ad-width   = "250" 
- data-ad-height  = "250"></ins> 
-<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-</center>
-
 
 ### 0-2. Node.js 설치
 
@@ -209,9 +200,9 @@ Webstorm을 설치하고 테마 설정등을 하고 나면 아래와 같은 창�
 
 사실 JetBrain사의 제품은 **유료 버전이 기능이 훨씬 우수하여** 부담이 되는 것이 사실입니다. 만일 학생이라면 학생인증을 받아 JetBrain사의 제품을 사용하는 것을 권장합니다.
 
-그러면 이제 WebStorm 없이 Express-generator만을 이용해서 프로젝트를 만들어 봅시다. npm을 사용하게될 예정입니다. 제 블로그 [해당 글](https://doncolmi.github.io/Node.js-%EA%B3%B5%EB%B6%80(7)/) 에서 npm에 대해 설명하고있으니 참고 바랍니다.
+그러면 이제 WebStorm 없이 Express-generator만을 이용해서 프로젝트를 만들어 봅시다. npm을 사용하게될 예정입니다. 제 블로그 [해당 글](<https://doncolmi.github.io/Node.js-%EA%B3%B5%EB%B6%80(7)/>) 에서 npm에 대해 설명하고있으니 참고 바랍니다.
 
-cmd창을 띄워주세요.  npm을 사용하게 됩니다. `npm install express-generator -g` 를 입력해서 express-generator를 전역설치 해줍시다.
+cmd창을 띄워주세요. npm을 사용하게 됩니다. `npm install express-generator -g` 를 입력해서 express-generator를 전역설치 해줍시다.
 
 <center><img src="/assets/img/nodejs/newProject/2020-05-12-newProject1/22.png"></center>
 
@@ -263,7 +254,7 @@ express-generator으로 만들어진 프로젝트는 아래와 같은 구조를 
 
 저는 실제로 프로젝트를 만질 때에는 위와 같은 구조를 가지지는 않으나 해당 예제는 위와같은 구조로 진행하겠습니다.
 
-추가로 app.js와 www에 관한 내용은 제 블로그에서 [해당 글](https://doncolmi.github.io/Node.js-%EA%B3%B5%EB%B6%80(8)/)을 통해 알 수 있습니다.
+추가로 app.js와 www에 관한 내용은 제 블로그에서 [해당 글](<https://doncolmi.github.io/Node.js-%EA%B3%B5%EB%B6%80(8)/>)을 통해 알 수 있습니다.
 
 이제 app.js에 한번 가주세요.
 
@@ -274,15 +265,6 @@ app.js에 가면 상관없긴 하지만 **var 천국입니다.** 현재 JS에서
 <center><img src="/assets/img/nodejs/newProject/2020-05-12-newProject1/28.png"></center>
 <center><small>어우 깔끔해</small></center>
 
-
 그리고 bin/www.js도 이와 같은 방법으로 var를 모두 지워주시면 모든 세팅이 끝났습니다.
 
 재미없는 글을 따라오느라 수고 많으셨고 다음 장부터는 실제로 서버를 켜보고 게시판을 만들어보도록 하겠습니다.
-
-<center>
-<ins class="kakao_ad_area" style="display:none;" 
- data-ad-unit    = "DAN-u8dziawcgw1g" 
- data-ad-width   = "728" 
- data-ad-height  = "90"></ins> 
-<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-</center>

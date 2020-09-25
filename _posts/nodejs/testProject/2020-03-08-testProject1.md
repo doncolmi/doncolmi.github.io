@@ -17,20 +17,12 @@ node.js와 express를 공부했지만 아직 갈피를 잡지 못했다. 사실 
 
 - [Node.js 12.16.1 LTS](https://nodejs.org/ko/)
 - express 4.16.1
-    - 템플릿 엔진은 pug 사용 예정
+  - 템플릿 엔진은 pug 사용 예정
 - [MariaDB](https://mariadb.org)
 - IDE는 Jetbrain사의 Webstorm을 사용한다.
 
 <center><img src="/assets/img/nodejs/testProject/2020-03-08-testProject1/1.png"></center>
 <center><small>IDE는 MS사의 Visual Studio Code를 사용해도 무방하다. Notepad++도 가능하다.</small></center>
-
-<center>
-<ins class="kakao_ad_area" style="display:none; margin-top: 15px;" 
- data-ad-unit    = "DAN-1iykkck0nlqnp" 
- data-ad-width   = "250" 
- data-ad-height  = "250"></ins> 
-<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-</center>
 
 ### Node.js 세팅
 
@@ -57,9 +49,9 @@ node.js와 express를 공부했지만 아직 갈피를 잡지 못했다. 사실 
 
     Microsoft Windows [Version 10.0.18362.657]
     (c) 2019 Microsoft Corporation. All rights reserved.
-    
+
     C:\Users\j>cd C:\nodejs
-    
+
     C:\nodejs>express --view=pug testapp
 
 위는 명령 프롬포트 창이다. `cd C:\nodejs`를 이용하여 **해당 위치로 이동한다음** `express --view=pug 프로젝트이름`을 입력해준다.
@@ -68,7 +60,7 @@ node.js와 express를 공부했지만 아직 갈피를 잡지 못했다. 사실 
 
 `--view=pug`은 템플릿 엔진을 무엇으로 쓸건지 설정해주는 것인데, 이를 설정하지 않으면 자동으로 `jade`라는 템플릿 엔진으로 설정된다.
 
-본래 **jade였던 이름이 pug로 바뀌었을 뿐이지만 편의를 위해 나는 pug로 바꾼다음 진행한다. 템플릿엔진은 jade/pug 말고도 유명한 것은 ejs가 있다. node.js의 템플릿 엔진은 [이 링크](https://doncolmi.github.io/Node.js-공부(9)/)를 통해 확인하자.** 
+본래 **jade였던 이름이 pug로 바뀌었을 뿐이지만 편의를 위해 나는 pug로 바꾼다음 진행한다. 템플릿엔진은 jade/pug 말고도 유명한 것은 ejs가 있다. node.js의 템플릿 엔진은 [이 링크](<https://doncolmi.github.io/Node.js-공부(9)/>)를 통해 확인하자.**
 
 <center><img src="/assets/img/nodejs/testProject/2020-03-08-testProject1/4.png"></center>
 
@@ -101,7 +93,7 @@ node.js와 express를 공부했지만 아직 갈피를 잡지 못했다. 사실 
         ├── index.pug
         └── layout.pug
 
-사실 express-generator나 express의 구조에 대해서는 [이미 글을 쓴 바](https://doncolmi.github.io/Node.js-공부(8)/) 있다. 이해가 안가는 부분이 있다면 댓글을 통해서나 블로그 왼쪽 하단 이메일버튼을 통해 질문해준다면 아는만큼 알려드릴게여;
+사실 express-generator나 express의 구조에 대해서는 [이미 글을 쓴 바](<https://doncolmi.github.io/Node.js-공부(8)/>) 있다. 이해가 안가는 부분이 있다면 댓글을 통해서나 블로그 왼쪽 하단 이메일버튼을 통해 질문해준다면 아는만큼 알려드릴게여;
 
 간단히 설명하자면 `app.js`가 전반적인 프로젝트의 설정을 담당하고있다. `package.json`은 프로젝트의 의존성이나 이름 설명등 정보를 담고있다.
 
@@ -113,8 +105,6 @@ node.js와 express를 공부했지만 아직 갈피를 잡지 못했다. 사실 
 
 <center><img src="/assets/img/nodejs/testProject/2020-03-08-testProject1/7.png"></center>
 <center><small>이게 뭔데? 라고 질문하면 제가 직접 대답하는거보단 검색하는게 더 빠를거 같습니다.</small></center>
-
-
 
 이제 다시 프로젝트로 돌아와서 `npm install`을 눌러서 모든 의존성이 설치되었다면 `package.json`으로 들어가 내용을 살펴보자.
 

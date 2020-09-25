@@ -19,13 +19,6 @@ layout: main
         <h1 class="page-title">{{page.title}}</h1>
         <div class="page-date"><span>{{page.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
-      <center>
-        <ins class="kakao_ad_area" style="display:none; margin-top: 15px;"
-             data-ad-unit    = "DAN-t86vxjjq3eb6"
-             data-ad-width   = "250"
-             data-ad-height  = "250"></ins>
-        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-      </center>
         {{content | markdownify}}
        <div class="page-share">
           <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
@@ -38,13 +31,6 @@ layout: main
           {% endfor %}
         </div>
       </div>
-    <center>
-      <ins class="kakao_ad_area" style="display:none; margin-top: 15px;"
-           data-ad-unit    = "DAN-1ib6icg9jx0e1"
-           data-ad-width   = "250"
-           data-ad-height  = "250"></ins>
-      <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-    </center>
       {% include disqus.html %}
     </div> <!-- End Wrap Content -->
   </div> <!-- End Page Content -->

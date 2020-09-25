@@ -13,7 +13,7 @@ tags: [nodejs]
 
 1. [Node.js + Express + MariaDB 로 로그인/게시판 구현하기(1)](https://doncolmi.github.io/testProject1/)
 
-    해당 글에선 node 설치와 express-generator와 nodemon을 이용한 express 세팅을 했다.
+   해당 글에선 node 설치와 express-generator와 nodemon을 이용한 express 세팅을 했다.
 
 ### 소개
 
@@ -25,7 +25,7 @@ node.js와 express를 공부했지만 아직 갈피를 잡지 못했다. 사실 
 
 - [Node.js 12.16.1 LTS](https://nodejs.org/ko/)
 - express 4.16.1
-    - 템플릿 엔진은 pug 사용 예정
+  - 템플릿 엔진은 pug 사용 예정
 - [MariaDB](https://mariadb.org)
 - IDE는 Jetbrain사의 Webstorm을 사용한다.
 
@@ -37,7 +37,7 @@ node.js와 express를 공부했지만 아직 갈피를 잡지 못했다. 사실 
 
 ---
 
-먼저 MariaDB는 이미 유명하지만 혹시 모를 사람들을 위해서 복습하는겸 적어두고 가려한다. MariaDB는 **오픈소스**의 관계형 데이터베이스 관리 시스템(RDBMS)이다. 
+먼저 MariaDB는 이미 유명하지만 혹시 모를 사람들을 위해서 복습하는겸 적어두고 가려한다. MariaDB는 **오픈소스**의 관계형 데이터베이스 관리 시스템(RDBMS)이다.
 
 <center><img src="/assets/img/nodejs/testProject/2020-03-09-testProject2/1.png"></center>
 
@@ -51,7 +51,6 @@ node.js와 express를 공부했지만 아직 갈피를 잡지 못했다. 사실 
 **이제 본격적으로 설치에 들어가자.** 일단 [MariaDB 공식 사이트](https://mariadb.org)에 접속하자z
 
 <center><img src="/assets/img/nodejs/testProject/2020-03-09-testProject2/3.png"></center>
-
 
 여기서 Download를 눌러주자.
 
@@ -89,11 +88,11 @@ node.js와 express를 공부했지만 아직 갈피를 잡지 못했다. 사실 
     Welcome to the MariaDB monitor.  Commands end with ; or \g.
     Your MariaDB connection id is 9
     Server version: 10.4.12-MariaDB mariadb.org binary distribution
-    
+
     Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
-    
+
     Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-    
+
     MariaDB [(none)]>
 
 여기까지 했다면 성공한거다. 왜 MariaDB를 설치했는데 MySQL 콘솔창이 나오냐? 라고 할 수 있는데 이는 MariaDB가 MySQL의 소스를 기반으로 뒀기 때문이다. ~~프로젝트를 진행하면서 mariadb인데도 mysql 기반 노드를 사용할 때가 있다...~~
@@ -118,24 +117,24 @@ root 계정에서 진행해도 되지만 MariaDB에 친숙해질겸 계정을 �
 
     MariaDB [(none)]> GRANT ALL PRIVILEGES ON *.* TO 'limc'@'localhost' WITH GRANT OPTION;
     Query OK, 0 rows affected (0.005 sec)
-    
+
     MariaDB [(none)]> Ctrl-C -- exit!
     Bye
-    
+
     C:\Program Files\MariaDB 10.4\bin>
 
-이제 `mysql -u 유저이름 -p`를 입력해 방금 만든 계정으로 접근하자. 
+이제 `mysql -u 유저이름 -p`를 입력해 방금 만든 계정으로 접근하자.
 
     C:\Program Files\MariaDB 10.4\bin>mysql -u limc -p
     Enter password: ******
     Welcome to the MariaDB monitor.  Commands end with ; or \g.
     Your MariaDB connection id is 13
     Server version: 10.4.12-MariaDB mariadb.org binary distribution
-    
+
     Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
-    
+
     Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-    
+
     MariaDB [(none)]>
 
 나의 경우엔 계정이름은 limc이고 비밀번호는 data19로 만들었기에 위와 같이 접근했다. 일단 우리는 현재
@@ -155,7 +154,7 @@ DB를 만들어야 그 안에 테이블을 만들어 데이터를 집어 넣을 
 
     MariaDB [(none)]> create database testProject;
     Query OK, 1 row affected (0.002 sec)
-    
+
     MariaDB [(none)]> use testProject;
     Database changed
     MariaDB [testProject]>
@@ -174,10 +173,10 @@ DB를 만들어야 그 안에 테이블을 만들어 데이터를 집어 넣을 
 
     MariaDB [testProject]> CREATE TABLE test ( id INT PRIMARY KEY, name VARCHAR(20) );
     Query OK, 0 rows affected (0.023 sec)
-    
+
     MariaDB [testProject]> INSERT INTO test VALUES ( 1, 'LimC' );
     Query OK, 1 row affected (0.013 sec)
-    
+
     MariaDB [testProject]> SELECT * FROM test;
     +----+------+
     | id | name |
@@ -188,32 +187,24 @@ DB를 만들어야 그 안에 테이블을 만들어 데이터를 집어 넣을 
 
 이러면 **지루하고 지루했던 MariaDB세팅은 끝냈다고 볼 수 있다. 이제 웹스톰으로 넘어가 프로젝트를 보자.**
 
-<center>
-<ins class="kakao_ad_area" style="display:none; margin-top: 15px;" 
- data-ad-unit    = "DAN-1iykkck0nlqnp" 
- data-ad-width   = "250" 
- data-ad-height  = "250"></ins> 
-<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-</center>
-
 ### Express와 MariaDB 연동
 
 ---
 
-제일 먼저 할일은 프로젝트 경로에 가서 npm을 이용해 mysql 커넥터를 설치해야한다. 
+제일 먼저 할일은 프로젝트 경로에 가서 npm을 이용해 mysql 커넥터를 설치해야한다.
 
     C:\Users\data-24>cd C:\nodejs\testProject
-    
+
     C:\nodejs\testProject>npm install mysql --save
     + mysql@2.18.1
     added 9 packages from 14 contributors and audited 260 packages in 1.878s
-    
+
     2 packages are looking for funding
       run `npm fund` for details
-    
+
     found 1 low severity vulnerability
       run `npm audit fix` to fix them, or `npm audit` for details
-    
+
     C:\nodejs\testProject>
 
 명령 프롬프트를 켜서 해당 경로로 가준 후에 `npm install mysql --save`를 입력해 다운받아주자, 그 다음 해당 프로젝트의 `package.json`으로 가서 `dependencies` 에 mysql이 있는지 확인해주자
@@ -250,27 +241,27 @@ DB를 만들어야 그 안에 테이블을 만들어 데이터를 집어 넣을 
 
 - `const maria = require('mysql');`
 
-    mysql 커넥터를 사용하기 위해 이를 호출해주었다.
+  mysql 커넥터를 사용하기 위해 이를 호출해주었다.
 
 - `const conn = maria.createConnection`
 
-    MariaDB에 접속하기 위해 커넥션을 만들어주는 부분이다.
+  MariaDB에 접속하기 위해 커넥션을 만들어주는 부분이다.
 
-    - `host:'localhost'` : 접속할 ip를 적어준다. 여기선 localhost라고 적어주자
-    - `port:3306` : 접속할 포트도 적어줘야한다. 설치할 때 설정했던 3306을 적어주자.
-    - 그 아래는 만들었던 user, password, database를 기억해 적어주자.
+  - `host:'localhost'` : 접속할 ip를 적어준다. 여기선 localhost라고 적어주자
+  - `port:3306` : 접속할 포트도 적어줘야한다. 설치할 때 설정했던 3306을 적어주자.
+  - 그 아래는 만들었던 user, password, database를 기억해 적어주자.
 
-위처럼 적었다면 이제 `app.js`로 가주자. 
+위처럼 적었다면 이제 `app.js`로 가주자.
 
     // app.js
-    
+
     // too many codes...
-    
+
     var app = express();
-    
+
     const maria = require('./maria');
     maria.connect();
-    
+
     // too many codes...
 
 이렇게 코드를 넣어주자. 아무곳에나 넣어줘도 되지만 `var app = express();` 아래에 넣었다. 이제 `routes/index.js`로 가보자.
@@ -279,12 +270,12 @@ DB를 만들어야 그 안에 테이블을 만들어 데이터를 집어 넣을 
 
     var express = require('express');
     var router = express.Router();
-    
+
     /* GET home page. */
     router.get('/', function(req, res, next) {
       res.render('index', { title: 'Express' });
     });
-    
+
     module.exports = router;
     // 기존 코드들
 
@@ -292,10 +283,10 @@ DB를 만들어야 그 안에 테이블을 만들어 데이터를 집어 넣을 
 
     var express = require('express');
     var router = express.Router();
-    
+
     const maria = require('../maria'); // 작성한 maria.js를 불러온다.
     // connection 은 서버가 켜질 때 app.js 에서 수행되었다.
-    
+
     /* GET home page. */
     router.get('/', function(req, res, next) {
       maria.query('select * from test', function(err, rows, fields) { // 쿼리문을 이용해 데이터를 가져온다.
@@ -307,7 +298,7 @@ DB를 만들어야 그 안에 테이블을 만들어 데이터를 집어 넣을 
         }
       });
     });
-    
+
     module.exports = router;
 
 필요한 설명은 주석에 달아놓았다. 이제 터미널에 `npm start`를 입력해 서버를 실행시켜보자.
@@ -324,7 +315,7 @@ DB를 만들어야 그 안에 테이블을 만들어 데이터를 집어 넣을 
 
     MariaDB [testProject]> INSERT INTO test VALUES ( 2, 'wow' );
     Query OK, 1 row affected (0.006 sec)
-    
+
     MariaDB [testProject]> SELECT * FROM test;
     +----+------+
     | id | name |

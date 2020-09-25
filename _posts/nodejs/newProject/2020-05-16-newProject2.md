@@ -15,7 +15,7 @@ Node.js + Express + MariaDB로 로그인/게시판을 만들고자 했던 시리
 
 - [Node.js 12.16.1 LTS](https://nodejs.org/ko/)
 - express 4.16.1
-    - 템플릿 엔진은 pug 사용 예정
+  - 템플릿 엔진은 pug 사용 예정
 - [MariaDB](https://mariadb.org)
 - IDE는 Jetbrain사의 Webstorm을 사용한다.
 
@@ -58,12 +58,12 @@ Node.js + Express + MariaDB로 로그인/게시판을 만들고자 했던 시리
 ```jsx
 // routes/index.js
 
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get("/", function (req, res, next) {
+  res.render("index", { title: "Express" });
 });
 
 module.exports = router;
@@ -75,20 +75,20 @@ module.exports = router;
 
 - `const express = require('express');`
 - `const router = express.Router();`
-    - express는 라우팅을 지원합니다. 그 기능을 사용하기 위해서 express를 require으로 불러옵니다. 그리고 router라는 변수안에 express의 Router기능을 넣습니다.
+  - express는 라우팅을 지원합니다. 그 기능을 사용하기 위해서 express를 require으로 불러옵니다. 그리고 router라는 변수안에 express의 Router기능을 넣습니다.
 - `router.get('/', function(req, res, next) {`
-    - 이제 라우팅을 위해 router 변수를 사용해줍니다. get 메소드는 REST API의 GET 통신을 위한 메소드입니다.
-    - 첫 번째 인자인 `'/'` 은 주소값입니다. 만약 사용자가 http://내사이트.com/ 으로 접속했다면 바로 이어지는 두 번째 인자로 들어온 함수를 실행합니다.
-    - 두 번째 인자는 앞서 설명해 드렸듯이 해당 함수를 실행합니다. 함수의 인자에 대해서 설명드리겠습니다.
-        - `req` : request의 약자로 요청하는 쪽에서 넘어오는 정보를 가지고 있습니다.
-        - `res` : reulst의 약자로 저희가 사용자에게 View를 뿌려줄때 사용합니다.
-        - `next` : 여기선 get 메소드의 인자가 2개이지만 사실 3개 이상으로 설정할 수 있습니다. 여기서의 next는 다음 인자로 설정된 함수를 의미합니다.
-    - 제가 기초가 부족해서 설명이 부족했습니다. REST API의 GET, POST, PATCH, DELETE 에 대한 개념이 확실하지 않으신 분들은 [이 블로그](https://meetup.toast.com/posts/92)에서 공부하고 오시면 편합니다.
+  - 이제 라우팅을 위해 router 변수를 사용해줍니다. get 메소드는 REST API의 GET 통신을 위한 메소드입니다.
+  - 첫 번째 인자인 `'/'` 은 주소값입니다. 만약 사용자가 http://내사이트.com/ 으로 접속했다면 바로 이어지는 두 번째 인자로 들어온 함수를 실행합니다.
+  - 두 번째 인자는 앞서 설명해 드렸듯이 해당 함수를 실행합니다. 함수의 인자에 대해서 설명드리겠습니다.
+    - `req` : request의 약자로 요청하는 쪽에서 넘어오는 정보를 가지고 있습니다.
+    - `res` : reulst의 약자로 저희가 사용자에게 View를 뿌려줄때 사용합니다.
+    - `next` : 여기선 get 메소드의 인자가 2개이지만 사실 3개 이상으로 설정할 수 있습니다. 여기서의 next는 다음 인자로 설정된 함수를 의미합니다.
+  - 제가 기초가 부족해서 설명이 부족했습니다. REST API의 GET, POST, PATCH, DELETE 에 대한 개념이 확실하지 않으신 분들은 [이 블로그](https://meetup.toast.com/posts/92)에서 공부하고 오시면 편합니다.
 - `res.render('index', { title: 'Express' });`
-    - 결과값으로 템플릿 페이지를 렌더링해서 뿌려준다는 의미입니다. render 함수의 첫 번째 인자인 `'index'`는 `/views/index.pug` 파일을 의미합니다. 이 것에 대한 설명은 `app.js`에 있습니다.
-    - 두 번째 인자는 넘겨줄 값입니다. `index.pug`라는 파일에서 title이라는 변수는 문자열 `'Express'`를 가지게됩니다.
+  - 결과값으로 템플릿 페이지를 렌더링해서 뿌려준다는 의미입니다. render 함수의 첫 번째 인자인 `'index'`는 `/views/index.pug` 파일을 의미합니다. 이 것에 대한 설명은 `app.js`에 있습니다.
+  - 두 번째 인자는 넘겨줄 값입니다. `index.pug`라는 파일에서 title이라는 변수는 문자열 `'Express'`를 가지게됩니다.
 - `module.exports = router;`
-    - 이제 다른 js 파일에서 `routes/index.js` 파일을 모듈로 사용할 때에는 router를 사용하게됩니다.
+  - 이제 다른 js 파일에서 `routes/index.js` 파일을 모듈로 사용할 때에는 router를 사용하게됩니다.
 
 간단하지만 제가 너무 어렵게 설명한건 아닐까 생각이듭니다. 대충 요약하자면 **'/'으로 접속하면 두번째 인자 함수를 통해서 결과값으로 index.pug를 렌더링해서 뿌려주는** 함수였습니다.
 
@@ -104,44 +104,46 @@ block content
   p Welcome to #{title}
 ```
 
-일단 템플릿 문법에 관한 설명은 [제 블로그 글](https://doncolmi.github.io/Node.js-%EA%B3%B5%EB%B6%80(9)/)을 보면 대충 나와있습니다. 이 쪽에서 학습하시면 더욱 수월하게 진행할 수 있습니다. 이제 코드를 뜯어보겠습니다. 뜯을것도 없지만요...
+일단 템플릿 문법에 관한 설명은 [제 블로그 글](<https://doncolmi.github.io/Node.js-%EA%B3%B5%EB%B6%80(9)/>)을 보면 대충 나와있습니다. 이 쪽에서 학습하시면 더욱 수월하게 진행할 수 있습니다. 이제 코드를 뜯어보겠습니다. 뜯을것도 없지만요...
 
 - `extends layout`
-    - 아래 코드는 views/error.pug 파일입니다.
 
-    ```jsx
-    // views/layout.pug
+  - 아래 코드는 views/error.pug 파일입니다.
 
-    doctype html
-    html
-      head
-        title= title
-        link(rel='stylesheet', href='/stylesheets/style.css')
-      body
-        **block content**
-    ```
+  ```jsx
+  // views/layout.pug
 
-    - extends는 위와 같이 공통된 레이아웃을 사용할 때에 해당 pug파일을 다른 pug파일로 불러 오는 역할을합니다.
-    - 주목 해야할 부분은 `block content` 입니다. 자세히보면 `index.pug`파일에도 block content가 있죠? **여기서 부터 두 파일이 이어지게 됩니다.**
+  doctype html
+  html
+    head
+      title= title
+      link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+      **block content**
+  ```
+
+  - extends는 위와 같이 공통된 레이아웃을 사용할 때에 해당 pug파일을 다른 pug파일로 불러 오는 역할을합니다.
+  - 주목 해야할 부분은 `block content` 입니다. 자세히보면 `index.pug`파일에도 block content가 있죠? **여기서 부터 두 파일이 이어지게 됩니다.**
+
 - `h1= title`
-    - 아까 `routes/index.js`에서 `res.render('index', {title : 'Express'});` 로 데이터를 넘긴 것을 기억하시죠?? 여기서 저 title이 바로 controller 역할을 하는 `routes/index.js`에서 넘어온 값입니다.
+  - 아까 `routes/index.js`에서 `res.render('index', {title : 'Express'});` 로 데이터를 넘긴 것을 기억하시죠?? 여기서 저 title이 바로 controller 역할을 하는 `routes/index.js`에서 넘어온 값입니다.
 - `p Welcom to #{title}`
-    - 해당 코드는 `<p>Welcome to #{title}</p>`로 렌더링 됩니다.
-    - 위 라인에선 `title`을 `#{}`안에 넣지 않고 사용했는데 왜 이번엔 `#{title}`이라고 표현한건가요?
-        - 텍스트와 구분하기 위해서 텍스트와 섞어 사용할 때에는 `#{}`을 사용해서 해당 변수를 사용해줍니다.
+  - 해당 코드는 `<p>Welcome to #{title}</p>`로 렌더링 됩니다.
+  - 위 라인에선 `title`을 `#{}`안에 넣지 않고 사용했는데 왜 이번엔 `#{title}`이라고 표현한건가요?
+    - 텍스트와 구분하기 위해서 텍스트와 섞어 사용할 때에는 `#{}`을 사용해서 해당 변수를 사용해줍니다.
 
 그러면 이 코드는 어떻게 html로 바뀌게 될까요?
 
 ```html
 <html>
-	<head>
-		<title>Express</title>
-		<link rel="stylesheet" href="/stylesheets/style.css">
-	</head>
-	<body>
-		<h1>Express</h1>
-		<p>Welcome to Express</p>
-	</body>
+  <head>
+    <title>Express</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1>Express</h1>
+    <p>Welcome to Express</p>
+  </body>
 </html>
 ```
 
@@ -218,7 +220,7 @@ block content
 
 <center><img src="/assets/img/nodejs/newProject/2020-05-16-newProject2/8.png"></center>
 
-그렇다면 이렇게 올바르게 사이트가 나오는 것을 확인할 수 있습니다. 추가로 cmd창을 다시 보면 
+그렇다면 이렇게 올바르게 사이트가 나오는 것을 확인할 수 있습니다. 추가로 cmd창을 다시 보면
 
 <center><img src="/assets/img/nodejs/newProject/2020-05-16-newProject2/9.png"></center>
 
@@ -227,14 +229,6 @@ block content
 (stauts 숫자는 304 또는 200으로 나와야합니다.)
 
 드디어 서버를 실행시켰습니다. 그리고 서버를 끌 때는 Ctrl+C 를 누르고 **일괄 작업을 끝내시겠습니까 (Y/N)?** 라는 안내문이 나오면 y를 누르시고 엔터키로 빠져나오실 수 있습니다.
-
-<center>
-<ins class="kakao_ad_area" style="display:none; margin-top: 15px;" 
- data-ad-unit    = "DAN-1iykkck0nlqnp" 
- data-ad-width   = "250" 
- data-ad-height  = "250"></ins> 
-<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-</center>
 
 ### 1-3. Nodemon으로 작업 환경을 편하게 만들자.
 
