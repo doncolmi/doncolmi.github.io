@@ -13,6 +13,11 @@ layout: default
       <div style="display: flex; flex-direction: column; width: 100%;">
         <div style="background-color: rgba(255,255,255,0.1);">
           <a href="/tags/" class="tagText">글 분류 보기</a>
+          <ul>
+              {% for this_word in tag_words %}
+                <li ><a href="#{{ this_word | cgi_escape }}">{{ this_word }} <span>({{ site.tags[this_word].size }})</span></a></li>
+              {% endfor %}
+          </ul>
         </div>
       </div>
     </div>
